@@ -1,0 +1,30 @@
+.number{
+  background-color:rgb(99, 96, 96);
+  color:white;
+  font-family:arial;
+  font-size:20px;
+  border-style:none;
+  padding:10px;
+  width:60px;
+  height:60px;
+  border-radius:100px;
+  margin-right:5px;
+}
+.number1{ 
+  background-color:orange;
+  color:white;
+  font-family:arial;
+  font-size:25px;
+  font-weight:bold;
+  border-style:none;
+  padding:10px;
+  width:60px;
+  height:60px;
+  border-radius:100px;
+  margin-right:5px;
+
+}
+.number3{
+  color:white;
+  font-size:40px;
+}

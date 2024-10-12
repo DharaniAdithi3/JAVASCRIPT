@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <style>
+      .sub{
+      font-family:arial;
+      color:white;
+      background-color:black;
+      border-style: none;
+      border-radius:30px;
+      font-size:15px;
+      padding:8px;
+      font-weight: bold;
+      cursor:pointer;
+    }
+    .is{
+      background-color: white;
+      color:black;
+    }
+    .cost{
+      padding-right:10px;
+      padding-left:10px;
+      padding-top:10px;
+      padding-bottom: 10px;
+      font-size:15px;
+    }
+    .cal{
+      background-color: green;
+      color:white;
+      border-style:none;
+      padding:12px;
+      font-size:15px;
+    }
+    
+    </style>
+  </head>
+  <body>
+    <p>
+      YouTube Subscribe Button
+    </p>
+    <button class="sub"
+    onclick="
+    change();
+    ">
+      Subscribe
+    </button>
+    <p>
+      Amazon Shipping Calculator
+    </p>
+    <p>
+      Orders under $40 = +$10 shipping.
+    </p>
+    <p>
+      Orders over $40 = FREE shipping.
+    </p>
+    <input class="cost" placeholder="Cost of order"
+    onkeydown="
+    enter();
+    ">
+    <button class="cal" onclick="
+    update();
+    ">
+      Calculate
+    </button>
+    <p class="result"></p>
+    <p>
+      Rock Paper Scissors
+    </p>
+    <a href="lesson10-link.html"> click here</a>
+  </body>
+  <script>
+   
+    function change(){
+     const text= document.querySelector('.sub')
+    
+     if(text.innerText==='Subscribe')
+     {
+      text.innerText='Subscribed';
+      text.classList.add('is');
+     }
+     else 
+     {
+      text.innerText='Subscribe';
+      text.classList.remove('is');
+     }
+    }
+    function enter(){
+      let key=event.key;
+      if(key==='Enter')
+    {
+      update();
+    }
+    }
+    function update(){
+      const input=document.querySelector('.cost');
+      let num=Number(input.value);
+      if(num<40)
+    {
+      num+=10;
+    }
+    document.querySelector('.result').innerHTML=`$${num}`;
+    }
+
+  </script>
+</html>

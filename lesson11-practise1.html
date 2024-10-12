@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html>
+  <head></head>
+  <body>
+    <p>
+      Todo List Practice 1
+    </p>
+    <input class="get" placeholder="Todo name">
+    <button onclick="
+    add();
+    ">
+      Add
+    </button>
+    <p>
+      Todo List Practice 2
+    </p>
+    <input class="get1" placeholder="Todo name">
+    <button onclick="
+    add1();
+    ">
+      Add
+    </button>
+    <p class="result"></p>
+    <div class="result1"></div>
+    <script>
+      const array=[];
+      function add(){
+       let input1= document.querySelector('.get');
+       let input=input1.value;
+         array.push(input);
+        console.log(array);
+        input1.value='';
+      }
+      const array1=['make', 'dinner'];
+      rendertodolist();
+      function add1(){
+        
+        let input2=document.querySelector('.get1');
+         const input3=input2.value;
+         array1.push(input3);
+         console.log(array1);
+         input2.value='';
+         rendertodolist();
+      }
+         
+     function rendertodolist(){
+      let list='';
+      for(let i=0;i<array1.length;i++)
+      {
+        const todo=array1[i];
+       const html=`<p> ${todo}</p>`
+        list+=html;
+      }
+      document.querySelector('.result1').innerHTML=`${list}`;
+    }
+    </script>
+  </body>
+</html>

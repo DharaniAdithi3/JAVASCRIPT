@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Rock Paper Scissors</title>
+    <link rel="stylesheet" href="lesson10-link.css">
+  </head>
+  <body style="background-color: black;">
+    <p class="para">Rock Paper Scissors</p>
+    <button class="photo" onclick="
+      playGame('rock');
+    "><img class="photo1" src="rock-emoji.png"></button>
+
+    <button  class="photo" onclick="
+      playGame('paper');
+    "><img class="photo1" src="paper-emoji.png"></button>
+
+    <button class="photo" onclick="
+      playGame('scissors');
+    "><img class="photo1" src="scissors-emoji.png"></button>
+    <P class="status"></P>
+    <p class="show"></p>
+    <p class="displayScore"></p>
+
+    <button class="reset" onclick="
+     score.wins=0;
+     score.losses=0;
+     score.ties=0;
+     localStorage.removeItem('score');
+     updates();
+    ">Reset Score</button>
+
+    <script src="lesson10-link.js">
+    
+    </script>
+  </body>
+</html>

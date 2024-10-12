@@ -1,0 +1,110 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <style>
+      body{
+        font-family:arial;
+      }
+      .result1,.grid{
+        display:grid;
+        grid-template-columns:200px 130px 100px;
+        column-gap: 10px;
+        row-gap: 10px;
+        align-items: center;
+        margin-bottom:15px;
+        }
+        
+      .get1,.get2{
+        padding-top:8px;
+        padding-bottom:8px;
+        font-size: 15px;
+        }
+    
+      .grid{
+        align-items: stretch;
+      }
+      .add-css{
+        background-color:green;
+        color:white;
+        border-style:none;
+        padding-left:25px;
+        padding-right:25px;
+        padding-top:10px;
+        padding-bottom:10px;
+      }
+      .delete-button{
+        background-color:rgb(168, 4, 4);
+        color:white;
+        border-style:none;
+        padding-left:25px;
+        padding-right:25px;
+        padding-top:10px;
+        padding-bottom:10px;
+      }
+    </style>
+  </head>
+  <body>
+    <p>
+      Todo List Practice 2
+    </p>
+    <div class="grid">
+    <input class="get1" placeholder="Todo name">
+    <input type="date" class="get2">
+    <button class="add-css" onclick="
+    add1();
+    ">
+      Add
+    </button>
+  </div>
+    <div class="result1"></div>
+    <script>
+      const array1=[
+        {
+       name:`make`,
+       due:`2024-09-23`
+      },{
+        name:`dinner`,
+        due:`2024-09-23`
+      }];
+      rendertodolist();
+           
+     function rendertodolist(){
+      let list='';
+      for(let i=0;i<array1.length;i++)
+      {
+        const todo=array1[i];
+       // const name=todo.name;
+        const {name}=todo;
+        const {due}=todo;
+        //const due=todo.due;
+       const html=
+       `<div class="align"> ${name} </div>
+       <div class="align">${due}</div> 
+        <button class ="delete-button" onclick="
+        array1.splice(${i},1);
+        rendertodolist();
+        ">Delete</button>
+        `;
+        list+=html;
+      }
+      document.querySelector('.result1').innerHTML=`${list}`;
+    }
+      function add1(){
+        
+        let input2=document.querySelector('.get1');
+         const name=input2.value;
+         let input4=document.querySelector('.get2');
+         const due=input4.value;
+        // console.log(input5);
+         array1.push({
+          name:name,
+          due:due
+      });
+         //console.log(array1);
+         input2.value='';
+         rendertodolist();
+      }
+    
+    </script>
+  </body>
+</html>

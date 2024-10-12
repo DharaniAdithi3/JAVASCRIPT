@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html>
+  <head></head>
+  <body>
+    <script>
+     // const nums=[1,-3,5];
+        const nums=[-2,3,-5,7,10];
+     // const nums=[];
+      minMax(nums);
+      function minMax(nums)
+      {
+        let ans={
+          min:nums[0],
+          max:nums[0]
+        };
+        if(ans.min===undefined)
+        {
+          ans.min='null';
+        }
+        else{
+        for(let i=0;i<nums.length;i++)
+        {
+          if(ans.min>nums[i])
+        {
+         ans. min=nums[i];
+        }
+      }
+    }
+        if(ans.max===undefined)
+        {
+          ans.max='null';
+        }
+        else{
+        for(let i=0;i<nums.length;i++)
+        {
+          if(ans.max<nums[i])
+        {
+         ans. max=nums[i];
+        }
+      }
+        }
+        console.log(ans);
+        console.log(); 
+        
+      }
+      let strings=['apple','grapes','apple','apple'];
+     
+      count(strings);
+   
+      function count(strings)
+      {
+        let word={};
+        for(let i=0;i<strings.length;i++)
+      {
+
+       let count=1;
+        let len=strings[i];
+        if(word[len]){
+          continue;
+        }
+      {
+        for(let j=i+1;j<strings.length;j++)
+      {
+        if(len=== strings[j])
+      {
+        
+        count+=1;
+        
+      }
+     
+      } 
+      word[len]=count;
+      
+      }  
+    
+    }
+    console.log(word);
+      }
+    </script>
+  </body>
+</html>

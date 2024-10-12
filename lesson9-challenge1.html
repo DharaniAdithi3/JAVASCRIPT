@@ -1,0 +1,83 @@
+<!DOCTYPE HTML>
+<html>
+  <head></head>
+  <body>
+    <button onclick="
+       document.querySelector('.display').innerHTML=(`quantity : ${quantity}`);
+      ">
+      Show Quantity
+    </button>
+    <button  onclick="
+       updateCartQuantity(1);
+    
+    ">
+      Add to Cart
+    </button>
+    <button  onclick="
+     updateCartQuantity(2);
+    
+    ">
+      +2
+    </button>
+    <button  onclick="
+     updateCartQuantity(3);
+    ">
+      +3
+    </button>
+    <button  onclick="
+     updateCartQuantity(4);
+    ">
+      +4
+    </button>
+    <button  onclick="
+     updateCartQuantity(5);
+    ">
+      +5
+    </button>
+    <button onclick="
+      updateCartQuantity(-1);
+    ">
+      Remove from Quantity
+    </button>
+    <button onclick="
+     updateCartQuantity(-2);
+    ">
+      -2
+    </button>
+    <button onclick="
+    updateCartQuantity(-3);
+    ">
+      -3
+    </button>
+    <p class="display"></p>
+    <script>
+      let name = 'DHARANI';
+      console.log(`My name is : ${name}`);
+      let cost = 0;
+      cost=cost+5;
+      cost=cost+(2*3);
+      cost+=9;
+      let cost1 = cost;
+      let tax = cost1*0.1;
+      cost1=cost1+tax;
+      console.log(`Cost of food : $${cost}`);
+      console.log(`Cost of food with tax : $${cost1}`);
+       let quantity = 0;
+       function updateCartQuantity(value)
+       {
+        if(quantity+value>10)
+       {
+        return alert('Cart is full');
+       }
+       if(quantity+value<0)
+       {
+        return alert('Not enough items in cart');
+       }
+       {
+        quantity+=value;
+        document.querySelector('.display').innerHTML=(`quantity : ${quantity}`);
+       }
+       }
+    </script>
+  </body>
+</html>

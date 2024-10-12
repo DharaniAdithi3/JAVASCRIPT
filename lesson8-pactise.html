@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html>
+  <head></head>
+  <body>
+    <script>
+      /*
+      const product ={
+        name: 'dharani',
+        age:20
+      };
+      console.log(product);
+      console.log(product.name);
+      console.log(product.age);
+      product.name='DHARANI';
+      console.log(product.name);
+      product.new='newname';
+      console.log(product);
+      delete product.new;
+      console.log(product);
+      */
+     const product2={
+      name:'indhira',
+      age:20,
+      ['name-1']:'kumar',
+      ratings:{
+        star:5,
+        count:4
+      },
+      fun:function function1()
+      {
+        console.log('hello everybody');
+      }
+     };
+     console.log(product2['name']);
+     console.log(product2['name-1']);
+     console.log(product2.ratings);
+     console.log(product2.ratings.star);
+     product2.fun();
+     console.log (JSON.stringify(product2));
+     const jasonString=JSON.stringify(product2);
+     console.log(JSON.parse(jasonString));
+     const object1={
+      name: 'hello'
+     };
+     const object2=object1;
+     console.log(object1.name='dharani');
+     console.log(object2);
+     const object3={
+      name:'dharani'
+     };
+     console.log(object3===object1);
+     console.log(object1==object2);
+     
+     const object4={
+      name:'dharani'
+     };
+    // const name = name.object4;
+     const { name } =object4;
+     console.log(name);
+      </script>
+  </body>
+</html>

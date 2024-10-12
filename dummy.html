@@ -1,0 +1,25 @@
+<!DOCTYPE HTML>
+<html>
+  <head></head>
+  <body>
+    <script>
+      let number = 32243;
+      let rev=0;
+      function reverse(value)
+      {
+        while(value!==0)
+      {
+        copy = value;
+        tem = copy%10;
+        rev=rev*10+tem;
+        copy=copy/10;
+      }
+      console.log(`${rev}`);
+         
+      }
+      reverse(number);
+     
+
+    </script>
+  </body>
+</html>

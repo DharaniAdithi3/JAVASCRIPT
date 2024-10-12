@@ -1,0 +1,114 @@
+<!DOCTYPE HTML>
+<html>
+  <head></head>
+  <body>
+    
+    <button onclick="
+      
+     updateCalculator('1');
+      ">
+      1
+    </button>
+    <button onclick="
+     updateCalculator('2');
+    " >
+      2
+    </button>
+    <button onclick="
+    updateCalculator('3');
+    ">
+      3
+    </button>
+    <button onclick="
+    updateCalculator('+');
+    ">
+      +
+    </button>
+    <p></p>
+    <button onclick="
+    updateCalculator('4');
+    ">
+    4
+  </button>
+  <button onclick="
+  updateCalculator('5');
+  ">
+  5
+</button>
+<button onclick="
+updateCalculator('6');
+">
+6
+</button>
+<button onclick="
+updateCalculator('-');
+">
+-
+</button>
+<p></p>
+<button onclick="
+updateCalculator('7');
+">
+7
+</button>
+<button onclick="
+updateCalculator('8');
+">
+8
+</button>
+<button onclick="
+updateCalculator('9');
+">
+9
+</button>
+<button onclick="
+updateCalculator('*');
+">
+*
+</button>
+<p></p>
+<button onclick="
+updateCalculator('0');
+">
+0
+</button>
+<button onclick="
+updateCalculator('.');
+">
+.
+</button>
+    <button onclick="
+    number=eval(number);
+    console.log(number);
+    localStorage.setItem('number',number);
+    
+    ">
+      =
+    </button>
+    <button onclick="
+    updateCalculator('/');
+    
+    ">
+    /
+  </button>
+  <p></p>
+  <button onclick="
+  number ='';
+  console.log('cleared');
+  localStorage.setItem('number',number);
+  ">
+  clear
+</button>
+
+    <script>
+      let number = localStorage.getItem('number')||'';
+      function updateCalculator(value)
+      {
+        number=number+value;
+        console.log(number);
+        localStorage.setItem('number',number);
+      }
+      
+    </script>
+  </body>
+</html>

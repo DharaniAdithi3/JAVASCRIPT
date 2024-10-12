@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>arrays and loops</title>
+  </head>
+  <body>
+    <script>
+      const array=[10,20,30];
+      console.log(array);
+      console.log(array[0]);
+      console.log(array[1]);
+      console.log(array[2]);
+      array[1]=40;
+      console.log(array);
+      console.log(typeof[1,2]);
+      console.log(Array.isArray([1,2]));
+      console.log(array.length);
+      array.push(40);
+      console.log(array);
+      array.splice(0,1);
+      console.log(array);
+      console.log(array[0]);
+      array.splice(0,2);
+      console.log(array);
+      let i=1;
+      while(i<5)
+    {
+      console.log(i);
+      i=i+1;
+    }
+    for(let i=1;i<=3;i++)
+    {
+      console.log(i);
+    }
+    const todoarray=[
+      'hii',
+      'dharani',
+      'how',
+      'are',
+      'you'
+    ];
+    for(let i=0;i<todoarray.length;i++)
+    {
+      console.log(todoarray[i]);
+    }
+    const numbers=[1,1,3];
+    let sum=0;
+    for(let i=0;i<numbers.length;i++)
+    {
+      sum+=numbers[i];
+    }
+console.log(sum);
+   const num=[1,1,3];
+   const copy=[];
+   for(let i=0;i<num.length;i++)
+   {
+    copy[i] = num[i]*2;
+    
+   }
+   console.log(copy);
+
+
+
+
+
+    </script>
+  </body>
+</html>

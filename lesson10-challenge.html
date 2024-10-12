@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <style>
+      .game{
+  padding:10px;
+  border-style:none;
+  background-color:rgb(230,230,230);
+  border-radius:5px;
+ }
+ .game1{
+  background-color:black;
+  color:white;
+  border-radius:5px;
+ }
+    </style>
+  </head>
+  <body>
+    <button class="game game-button"
+    onclick="
+    play('.game-button');
+    ">
+      Gaming
+    </button>
+    <button class="game game-button2"
+    onclick="
+       play('.game-button2');
+    ">
+      Music
+    </button>
+    <button class="game game-button3"
+    onclick="
+     play('.game-button3');
+    ">
+      Tech
+    </button>
+  </body>
+  <script>
+    function play(selector){
+  const val1=document.querySelector(selector);
+if(!val1.classList.contains('game1'))
+{
+  previous();
+val1.classList.add('game1');
+
+}
+else {
+val1.classList.remove('game1');
+}
+}
+function previous(){
+  const previous=document.querySelector('.game1');
+  if(previous)
+{
+  previous.classList.remove('game1');
+}
+}
+
+  </script>
+</html>

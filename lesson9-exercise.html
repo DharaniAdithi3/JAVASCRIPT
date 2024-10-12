@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html>
+  <head></head>
+  <body>
+    <button class="button1">9a</button>
+    <button class="button2"
+    onclick="
+    done();
+    ">9b</button>
+    <button 
+    onclick="
+    document.querySelector('.p').innerHTML='YOU CHOSE HEADS';
+    ">
+      HEAD
+    </button>
+    <button 
+    onclick="
+    document.querySelector('.p').innerHTML='YOU CHOSE TAILS';
+    ">
+      TAILS
+    </button>
+    <P class="p"></P>
+    <input class=name placeholder="Name"
+    onkeydown="
+    enter();
+    ">
+    <button class="submit"
+    onclick="
+    change();
+    ">
+      submit
+    </button>
+    <p class="display"></p>
+    <script>
+    console.log(document.querySelector('.button1'));
+    function done(){
+      let a= document.querySelector('.button2');
+     if(a.innerHTML==='9b')
+     {
+      a.innerHTML='9b done';
+     }
+     else{
+      a.innerHTML='9b';
+     }
+    }
+    function enter(){
+      let key=event.key;
+      console.log(key);
+      if(event.key==='Enter')
+    {
+      change();
+    }
+    }
+    function change(){
+    let input=document.querySelector('.name');
+    let string=input.value;
+    document.querySelector('.display').innerHTML=(`Your name is : ${string}`);
+    }
+     
+   
+
+    </script>
+  </body>
+</html>

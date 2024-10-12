@@ -1,0 +1,112 @@
+<!DOCTYPE HTML>
+<html>
+  <head>
+   <link rel="stylesheet" href="lesson10-challenge2.css">
+  </head>
+  <script src="lesson10-challenge2.js"></script>
+  <body style="background-color: rgb(29, 28, 28);">
+    <p class=process></p>
+
+    <button class="number" onclick="
+      
+     updateCalculator('1');
+      ">
+      1
+    </button>
+    <button  class="number" onclick="
+     updateCalculator('2');
+    " >
+      2
+    </button>
+    <button   class="number"onclick="
+    updateCalculator('3');
+    ">
+      3
+    </button>
+    <button  class="number1" onclick="
+    updateCalculator('+');
+    ">
+      +
+    </button>
+    <p></p>
+    <button  class="number" onclick="
+    updateCalculator('4');
+    ">
+    4
+  </button>
+  <button  class="number" onclick="
+  updateCalculator('5');
+  ">
+  5
+</button>
+<button  class="number" onclick="
+updateCalculator('6');
+">
+6
+</button>
+<button   class="number1"onclick="
+updateCalculator('-');
+">
+-
+</button>
+<p></p>
+<button  class="number" onclick="
+updateCalculator('7');
+">
+7
+</button>
+<button   class="number" onclick="
+updateCalculator('8');
+">
+8
+</button>
+<button  class="number" onclick="
+updateCalculator('9');
+">
+9
+</button>
+<button  class="number1" onclick="
+updateCalculator('*');
+">
+*
+</button>
+<p></p>
+<button  class="number" onclick="
+updateCalculator('0');
+">
+0
+</button>
+<button   class="number" onclick="
+updateCalculator('.');
+">
+.
+</button>
+    <button   class="number" onclick="
+    number=eval(number);
+    let g=document.querySelector('.process');
+    g.classList.add('number3');
+    document.querySelector('.process').innerHTML=(number);
+   
+    localStorage.setItem('number',number);
+    
+    ">
+      =
+    </button>
+    <button  class="number1" onclick="
+    updateCalculator('/');
+    
+    ">
+    /
+  </button>
+  <p></p>
+  <button class="number" onclick="
+  number ='';
+  document.querySelector('.process').innerHTML=('cleared');
+  localStorage.setItem('number',number);
+  ">
+  clear
+</button>
+
+   
+  </body>
+</html>

@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <style>
+      .button2{
+        background-color:pink;
+      }
+      .button3{
+        background-color:rgb(188, 188, 245);
+      }
+      .button4{
+        background-color:palegreen;
+      }
+      .show1{
+        background-color:white;
+        color:white;
+      }
+      .big1{
+        font-size:50px;
+      }
+      .small1{
+        font-size:10px;
+      }
+
+    </style>
+  </head>
+  <body>
+    <button class="color" onclick="
+      change();
+      ">
+      Click
+    </button>
+    <button class="show" onclick="
+    hide();
+    ">
+      hiii 
+    </button>
+    <button class="big" onclick="
+   let perusu=document.querySelector('.big');
+   if(!perusu.classList.contains('big1'))
+   {
+
+   perusu.classList.add('big1');
+   }
+   else{
+    perusu.classList.remove('big1');
+   }
+    ">
+      BIG
+    </button>
+    <button class="small" onclick="
+    let sirusu=document.querySelector('.small');
+    if(!sirusu.classList.contains('small1'))
+    {
+    sirusu.classList.add('small1');
+    }
+    else{
+      sirusu.classList.remove('small1');
+    }
+    ">
+      SMALL
+    </button>
+  </body>
+  <script>
+    function change(){
+      const random=Math.random();
+      console.log(random)
+      let button1= document.querySelector('.color');
+      if(random>=0 && random<2/3)
+    {
+        button1.classList.add('button2');
+    }
+    else if(random>=2/3&&random< 3/3)
+    {
+      button1.classList.add('button3');
+    }
+    else if(random>=3/3 && random<1){
+      button1.classList.add('button4');
+    }
+    }
+    function hide(){
+    let val= document.querySelector('.show');
+    if(!val.classList.contains('show1'))
+      {
+         val.classList.add('show1');
+      }
+      else{
+        val.classList.remove('show1');
+      }
+
+    
+    }
+  </script>
+</html>

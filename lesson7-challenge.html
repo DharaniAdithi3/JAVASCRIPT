@@ -1,0 +1,106 @@
+<!DOCTYPE HTML>
+<html>
+  <head></head>
+  <body>
+    <button onclick="
+      
+     updateCalculator('1');
+      ">
+      1
+    </button>
+    <button onclick="
+     updateCalculator('22');
+    " >
+      2
+    </button>
+    <button onclick="
+    updateCalculator('3');
+    ">
+      3
+    </button>
+    <button onclick="
+    updateCalculator('+');
+    ">
+      +
+    </button>
+    <p></p>
+    <button onclick="
+    updateCalculator('4');
+    ">
+    4
+  </button>
+  <button onclick="
+  updateCalculator('5');
+  ">
+  5
+</button>
+<button onclick="
+updateCalculator('6');
+">
+6
+</button>
+<button onclick="
+updateCalculator('-');
+">
+-
+</button>
+<p></p>
+<button onclick="
+updateCalculator('7');
+">
+7
+</button>
+<button onclick="
+updateCalculator('8');
+">
+8
+</button>
+<button onclick="
+updateCalculator('9');
+">
+9
+</button>
+<button onclick="
+updateCalculator('*');
+">
+*
+</button>
+<p></p>
+<button onclick="
+updateCalculator('0');
+">
+</button>
+<button onclick="
+updateCalculator('.');
+">
+.
+</button>
+    <button onclick="
+    number=eval(number);
+    console.log(number);
+    ">
+      =
+    </button>
+    <button onclick="
+    updateCalculator('/');
+    ">
+    /
+  </button>
+  <p></p>
+  <button onclick="
+  number ='';
+  console.log('cleared');
+
+  ">
+  clear
+</button>
+    <script>
+      let number = '';
+      function updateCalculator(value)
+      {
+        number=number+value;
+        console.log(number);
+      }
+    </script>
+  </body>
+</html>
