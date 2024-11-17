@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html>
+    <head></head>
+    <body>
+        <button class="start"
+        onclick="
+        change();
+        ">
+            Start
+        </button>
+        <button class="cart"
+        onclick="change1();
+        ">
+            Add to cart
+        </button>
+        <p class="result"></p>
+    </body>
+    <script>
+        
+        let add=function(num1,num2)
+       {
+        for(let i=0;i<=1;i++)
+       {
+        
+            console.log(num1+num2);
+        }
+    }
+        add(2,3);
+        function runtwice(para)
+        {
+            para();
+        }
+        runtwice(
+            function()
+            {
+                for(let i=0;i<=1;i++)
+            {
+                console.log(2+3);
+            }
+            }
+        )
+        function change()
+        {
+            let value=document.querySelector('.start').innerText;
+            if(value==="Start")
+        {
+                       document.querySelector('.start').innerText="Loading.....";
+        }
+
+        setTimeout(function()
+        {
+            let value=document.querySelector('.start').innerText;
+            if(value!=="Start")
+        {
+                       document.querySelector('.start').innerText="Finished";
+
+           document.querySelector('.start').innerText="Finished";
+        }
+       /* else{
+            document.querySelector('.start').innerHTML="Start";
+        }*/
+        },3000);
+    }
+    function change1(){
+       let num= document.querySelector('.result').innerHTML="Added";
+        setTimeout(function(){
+            if(num==="Added")
+        {
+            document.querySelector('.result').innerHTML="";
+        }
+        },3000);
+    }
+
+    </script>
+</html>

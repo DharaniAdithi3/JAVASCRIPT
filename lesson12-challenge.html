@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title >app</title>
+    </head>
+    <body>
+        <button class="cart"
+        onclick="
+        added();
+        ">
+            Add to cart
+        </button>
+        <p class="result"></p>
+        <button class="add"
+        onclick="
+        num++;
+        ">
+            Add
+        </button>
+        <button class="remove"
+        onclick="
+        num--;
+        ">
+            remove
+            
+        </button>
+    </body>
+    <script>
+        function added(){
+            let remove;
+           let value= document.querySelector('.result');
+           value.innerHTML="Added";
+           clearTimeout(remove);
+        
+       remove=setTimeout(function()
+    {
+    
+        value.innerHTML=" ";
+    },2000);
+}
+let num=2;
+let interval=setInterval(function(){
+   if( document.title==="app"){
+    document.title=`(${num})new`;
+   }
+   else{
+    document.title="app";
+   }
+},1000);
+    </script>
+</html>
